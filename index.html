@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sryle/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=News+Cycle&family=Philosopher&display=swap" rel="stylesheet">
+    <title>FLEXBOX</title>
+</head>
+
+<body>
+    <h1>FLEXBOX</h1>
+    <p>El Módulo de Caja Flexible, comúnmente llamado flexbox, fue diseñado como un modelo unidimensional de layout, y
+        como un método que pueda ayudar a distribuir el espacio entre los ítems de una interfaz y mejorar las
+        capacidades de alineación.</p>
+    <div class="contenedor-container">
+        <h2>Propiedades del contenedor</h2>
+        <p id="p">Al añadir la propiedad flex-direction en el contenedor flex nos permite cambiar la dirección de
+            cómo los
+            ítems son desplegados. <br> Un área del documento que contiene un flexbox es llamada contendedor flex.
+            Para crear un contenedor flex, establecemos la propiedad del área del contenedor display como flex o
+            inline-flex. Tan pronto como hacemos esto, los hijos directos de este contenedor se vuelven ítems flex
+        </p>
+        <div class="flex-direction">
+            <h3>Flex-direction</h3>
+            <div class="container__flex-direction__row">
+                <h4>Row</h4>
+                <p>Predeterminado, de izquierda a derecha.</p>
+                <div class="contenedor__row">
+                    <div class="row-1">1</div>
+                    <div class="row-2">2</div>
+                    <div class="row-3">3</div>
+                    <div class="row-4">4</div>
+                    <div class="row-5">5</div>
+                </div>
+            </div>
+            <div class="container__flex-direction__row-reverse">
+                <h4>Row-reverse</h4>
+                <p>Colocando flex-direction: row-reverse se mantendrá el despliegue a lo largo de la fila, sin embargo
+                    el inicio y final quedarán al revés del original.</p>
+                <div class="contenedor__row-reverse">
+                    <div class="row-reverse-1">1</div>
+                    <div class="row-reverse-2">2</div>
+                    <div class="row-reverse-3">3</div>
+                    <div class="row-reverse-4">4</div>
+                    <div class="row-reverse-5">5</div>
+                </div>
+            </div>
+            <div class="container__flex-direction__column">
+                <h4>Column</h4>
+                <p>Si cambiamos flex-direction a column el eje principal se cambiará y los ítems aparecerán en una
+                    columna.</p>
+                <div class="contenedor__column">
+                    <div class="column-1">1</div>
+                    <div class="column-2">2</div>
+                    <div class="column-3">3</div>
+                    <div class="column-4">4</div>
+                    <div class="column-5">5</div>
+                </div>
+            </div>
+            <div class="container__flex-direction__column-reverse">
+                <h4>Column-reverse</h4>
+                <p>Colocando column-reverse las líneas de inicio y fin serán nuevamente puestas al revés.</p>
+                <div class="contenedor__column-reverse">
+                    <div class="column-reverse-1">1</div>
+                    <div class="column-reverse-2">2</div>
+                    <div class="column-reverse-3">3</div>
+                    <div class="column-reverse-4">4</div>
+                    <div class="column-reverse-5">5</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-wrap">
+            <h3>Flex-wrap</h3>
+            <div class="container__flex-wrap__nowrap">
+                <h4>Nowrap</h4>
+                <p>Los elementos flex son distribuidos en una sola línea, lo cual puede llevar a que se desborde el
+                    contenedor flex. El valor cross-start es equivalente a start o before según el valor de
+                    flex-direction</p>
+                <div class="contenedor__nowrap">
+                    <div class="nowrap-1">1</div>
+                    <div class="nowrap-2">2</div>
+                    <div class="nowrap-3">3</div>
+                    <div class="nowrap-4">4</div>
+                    <div class="nowrap-5">5</div>
+                    <div class="nowrap-1">1</div>
+                    <div class="nowrap-2">2</div>
+                    <div class="nowrap-3">3</div>
+                    <div class="nowrap-4">4</div>
+                    <div class="nowrap-5">5</div>
+                </div>
+            </div>
+            <div class="container__flex-wrap__wrap">
+                <h4>Wrap</h4>
+                <p>Cuando los ítems sean demasiados para desplegarlos en una línea, serán repartidos en la línea
+                    siguiente.</p>
+                <div class="contenedor__wrap">
+                    <div class="wrap-1">1</div>
+                    <div class="wrap-2">2</div>
+                    <div class="wrap-3">3</div>
+                    <div class="wrap-4">4</div>
+                    <div class="wrap-5">5</div>
+                    <div class="wrap-1">1</div>
+                    <div class="wrap-2">2</div>
+                    <div class="wrap-3">3</div>
+                    <div class="wrap-4">4</div>
+                    <div class="wrap-5">5</div>
+                </div>
+            </div>
+            <div class="container__flex-wrap__wrap-reverse">
+                <h4>wrap-reverse</h4>
+                <p>Actúa como wrap pero cross-start y cross-end están intercambiados.</p>
+                <div class="contenedor__wrap-reverse">
+                    <div class="wrap-reverse-1">1</div>
+                    <div class="wrap-reverse-2">2</div>
+                    <div class="wrap-reverse-3">3</div>
+                    <div class="wrap-reverse-4">4</div>
+                    <div class="wrap-reverse-5">5</div>
+                    <div class="wrap-reverse-1">1</div>
+                    <div class="wrap-reverse-2">2</div>
+                    <div class="wrap-reverse-3">3</div>
+                    <div class="wrap-reverse-4">4</div>
+                    <div class="wrap-reverse-5">5</div>
+                </div>
+            </div>
+        </div>
+        <div class="aling-items">
+            <h3>Aling-items</h3>
+            <div class="container__aling-items__flex-start">
+                <h4>Flex-star</h4>
+                <p>Los elementos se agrupan uno junto al otro hacia el borde inicial del contenedor de alineación en el
+                    eje apropiado.</p>
+                <div class="aling-items__flex-start">
+                    <div class="flex.start-1">1</div>
+                    <div class="flex.start-2">2</div>
+                    <div class="flex.start-3">3</div>
+                    <div class="flex.start-4">4</div>
+                    <div class="flex.start-5">5</div>
+                </div>
+            </div>
+            <div class="container__aling-items__flex-end">
+                <h4>Flex-end</h4>
+                <p>Los elementos se agrupan uno junto al otro hacia el borde final del contenedor de alineación en el
+                    eje apropiado.</p>
+                <div class="aling-items__flex-end">
+                    <div class="flex-end-1">1</div>
+                    <div class="flex-end-2">2</div>
+                    <div class="flex-end-3">3</div>
+                    <div class="flex-end-4">4</div>
+                    <div class="flex-end-5">5</div>
+                </div>
+            </div>
+            <div class="container__aling-items__center">
+                <h4>Center</h4>
+                <p>Los márgenes del elemento flexible son centrados dentro de la línea sobre su eje transversal. Si el
+                    tamaño transversal del elemento es mayor al del contenedor, se excederá por igual en ambas
+                    direcciones.</p>
+                <div class="aling-items__center">
+                    <div class="center-1">1</div>
+                    <div class="center-2">2</div>
+                    <div class="center-3">3</div>
+                    <div class="center-4">4</div>
+                    <div class="center-5">5</div>
+                </div>
+            </div>
+            <div class="container__aling-items__baseline">
+                <h4>Baseline</h4>
+                <p>Todos los elementos flexibles son ajustados de modo que sus bases queden alineadas. El elemento con
+                    la distancia mayor entre su límite transversal inicial y su base es combinado con el borde
+                    transversal de la línea.</p>
+                <div class="aling-items__baseline">
+                    <div class="baseline-1">1</div>
+                    <div class="baseline-2">2</div>
+                    <div class="baseline-3">3</div>
+                    <div class="baseline-4">4</div>
+                    <div class="baseline-5">5</div>
+                </div>
+            </div>
+            <div class="container__aling-items__stretch">
+                <h4>Stretch</h4>
+                <p>Las elementos flexibles son estirados de modo que el tamaño transversal de sus límites sea el mismo
+                    de la línea, manteniendo sus restricciones de anchura y altura.</p>
+                <div class="aling-items__stretch">
+                    <div class="stretch-1">1</div>
+                    <div class="stretch-2">2</div>
+                    <div class="stretch-3">3</div>
+                    <div class="stretch-4">4</div>
+                    <div class="stretch-5">5</div>
+                </div>
+            </div>
+        </div>
+        <div class="justify-content">
+            <h3>Justify-content</h3>
+            <div class="container__justify-content__flex-start">
+                <h4>Flex-star</h4>
+                <p>Los items flex se colocan comenzando desde el comienzo principal. El margen del primer item es
+                    alineado al ras con el borde del comienzo principal de la línea y cada item siguiente es alineado al
+                    ras con el precedente.</p>
+                <div class="justify-content__flex-start">
+                    <div class="flex.start-1">1</div>
+                    <div class="flex.start-2">2</div>
+                    <div class="flex.start-3">3</div>
+                    <div class="flex.start-4">4</div>
+                    <div class="flex.start-5">5</div>
+                </div>
+            </div>
+            <div class="container__justify-content__flex-end">
+                <h4>Flex-end</h4>
+                <p>Los items flex se colocan comenzando desde el final principal. El margen del último item es alineado
+                    al ras con el borde del final principal de la línea y cada item precedente es alineado al ras con el
+                    siguiente.</p>
+                <div class="justify-content__flex-end">
+                    <div class="flex-end-1">1</div>
+                    <div class="flex-end-2">2</div>
+                    <div class="flex-end-3">3</div>
+                    <div class="flex-end-4">4</div>
+                    <div class="flex-end-5">5</div>
+                </div>
+            </div>
+            <div class="container__justify-content__flex-between">
+                <h4>Space-between</h4>
+                <p>Los items flex se distribuyen uniformemente sobre la línea. El espaciamiento se hace de tal manera
+                    que el espacio adyacente entre dos items es el mismo. El borde del comienzo principal y el borde del
+                    final principal se alinean al ras con el borde del primer y último item respectivamente.</p>
+                <div class="justify-content__space-between">
+                    <div class="space-between-1">1</div>
+                    <div class="space-between-2">2</div>
+                    <div class="space-between-3">3</div>
+                    <div class="space-between-4">4</div>
+                    <div class="space-between-5">5</div>
+                </div>
+            </div>
+            <div class="container__justify-content__center">
+                <h4>Center</h4>
+                <p>Los items flex son colocados hacia el centro de la línea. Los items flex se alinean al ras entre sí y
+                    en torno al centro de la línea. El espacio entre el borde del comienzo principal de la línea y el
+                    primer item es el mismo que el espacio entre el borde del final principal y el último item de la
+                    línea.</p>
+                <div class="justify-content__center">
+                    <div class="center-1">1</div>
+                    <div class="center-2">2</div>
+                    <div class="center-3">3</div>
+                    <div class="center-4">4</div>
+                    <div class="center-5">5</div>
+                </div>
+            </div>
+            <div class="container__justify-content__space-around">
+                <h4>Space-around</h4>
+                <p>Los items flex se alinean uniformemente de tal manera que el espacio entre dos items adyacentes es el
+                    mismo. El espacio vacío anterior al primer item y posterior al último item equivale a la mitad del
+                    espacio entre dos items adyacentes.</p>
+                <div class="justify-content__space-around">
+                    <div class="space-around-1">1</div>
+                    <div class="space-around-2">2</div>
+                    <div class="space-around-3">3</div>
+                    <div class="space-around-4">4</div>
+                    <div class="space-around-5">5</div>
+                </div>
+            </div>
+        </div>
+        <div class="aling-content">
+            <h3>Aling-content</h3>
+            <div class="container__aling-content__flex-start">
+                <h4>Flex-star</h4>
+                <p>Las líneas son ajustadas a partir del inicio del eje transversal. El borde transversal de inicio de
+                    la primera línea y el del contenedor flexible quedan unidos. Cada línea siguiente es unida a su
+                    predecesora.</p>
+                <div class="aling-content__flex-start">
+                    <div class="flex.start-1">1</div>
+                    <div class="flex.start-2">2</div>
+                    <div class="flex.start-3">3</div>
+                    <div class="flex.start-4">4</div>
+                    <div class="flex.start-5">5</div>
+                    <div class="flex.start-1">1</div>
+                    <div class="flex.start-2">2</div>
+                    <div class="flex.start-3">3</div>
+                    <div class="flex.start-4">4</div>
+                    <div class="flex.start-5">5</div>
+                </div>
+            </div>
+            <div class="container__aling-content__flex-end">
+                <h4>Flex-end</h4>
+                <p>Las líneas son ajustadas a partir del final del eje transversal. El borde transversal final de la
+                    última línea y el del contenedor flexible quedan unidos. Cada línea que precede es unida a la línea
+                    siguiente.</p>
+                <div class="aling-content__flex-end">
+                    <div class="flex-end-1">1</div>
+                    <div class="flex-end-2">2</div>
+                    <div class="flex-end-3">3</div>
+                    <div class="flex-end-4">4</div>
+                    <div class="flex-end-5">5</div>
+                    <div class="flex-end-1">1</div>
+                    <div class="flex-end-2">2</div>
+                    <div class="flex-end-3">3</div>
+                    <div class="flex-end-4">4</div>
+                    <div class="flex-end-5">5</div>
+                </div>
+            </div>
+            <div class="container__aling-content__space-between">
+                <h4>Space-between</h4>
+                <p>Las líneas son distribuidas de manera uniforme en el contenedor flexible. El espaciado se hace de
+                    modo que la separación entre cualquier par de elementos adyacentes sea el mismo. Los bordes
+                    transversales de inicio y de fin del contenedor son unidos a los bordes de la primera y última
+                    línea, respectivamente.</p>
+                <div class="aling-content__space-between">
+                    <div class="space-between-1">1</div>
+                    <div class="space-between-2">2</div>
+                    <div class="space-between-3">3</div>
+                    <div class="space-between-4">4</div>
+                    <div class="space-between-5">5</div>
+                    <div class="space-between-1">1</div>
+                    <div class="space-between-2">2</div>
+                    <div class="space-between-3">3</div>
+                    <div class="space-between-4">4</div>
+                    <div class="space-between-5">5</div>
+                </div>
+            </div>
+            <div class="container__aling-content__center">
+                <h4>Center</h4>
+                <p>Las líneas son ajustadas hacia el centro del contenedor flexible. Las líneas son unidas entre sí,
+                    y centradas dentro del contenedor. El espacio entre el borde transversal de inicio y la primera
+                    línea, y el que hay entre el borde transversal final y la última línea es el mismo.</p>
+                <div class="aling-content__center">
+                    <div class="center-1">1</div>
+                    <div class="center-2">2</div>
+                    <div class="center-3">3</div>
+                    <div class="center-4">4</div>
+                    <div class="center-5">5</div>
+                    <div class="center-1">1</div>
+                    <div class="center-2">2</div>
+                    <div class="center-3">3</div>
+                    <div class="center-4">4</div>
+                    <div class="center-5">5</div>
+                </div>
+            </div>
+            <div class="container__aling-content__space-around">
+                <h4>Space-around</h4>
+                <p>Las líneas son distribuidas uniformemente de modo que el espacio entre cualquier par de elementos
+                    adyacentes sea el mismo. El espacio vacío antes de la primera línea y el espacio después de la
+                    última es igual a la mitad del espacio entre cualquier par de líneas adyacentes.</p>
+                <div class="aling-content__space-around">
+                    <div class="space-around-1">1</div>
+                    <div class="space-around-2">2</div>
+                    <div class="space-around-3">3</div>
+                    <div class="space-around-4">4</div>
+                    <div class="space-around-5">5</div>
+                    <div class="space-around-1">1</div>
+                    <div class="space-around-2">2</div>
+                    <div class="space-around-3">3</div>
+                    <div class="space-around-4">4</div>
+                    <div class="space-around-5">5</div>
+                </div>
+            </div>
+            <div class="container__aling-content__space-around">
+                <h4>Stretch</h4>
+                <p>Las líneas son estiradas para usar el espacio sobrante. El espacio libre en el contenedor es dividido
+                    por igual entre todas las líneas.</p>
+                <div class="aling-content__stretch">
+                    <div class="stretch-1">1</div>
+                    <div class="stretch-2">2</div>
+                    <div class="stretch-3">3</div>
+                    <div class="stretch-4">4</div>
+                    <div class="stretch-5">5</div>
+                    <div class="stretch-1">1</div>
+                    <div class="stretch-2">2</div>
+                    <div class="stretch-3">3</div>
+                    <div class="stretch-4">4</div>
+                    <div class="stretch-5">5</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor-items">
+        <h2>Propiedades de los items</h2>
+        <div class="_aling-self">
+            <h3>Aling-self</h3>
+            <div class="container__aling-self">
+                <h4>Auto</h4>
+                <p>Se calcula acorde al valor de align-items del padre, o al de stretch si el elemento no tiene padre.
+                </p>
+                <div class="aling-self__auto">
+                    <div class="auto-1">1</div>
+                    <div class="auto-2">2</div>
+                    <div class="auto-3">3</div>
+                    <div class="auto-4">4</div>
+                    <div class="auto-5">5</div>
+                </div>
+            </div>
+            <div class="container__aling-self__flex-start">
+                <h4>Flex-star</h4>
+                <p>El límite transversal inicial del elemento flexible es unido al borde transversal inicial de la
+                    línea.</p>
+                <div class="aling-self__flex-start">
+                    <div class="flex.start-1">1</div>
+                    <div class="flex.start-2">2</div>
+                    <div class="flex.start-3">3</div>
+                    <div class="flex.start-4">4</div>
+                    <div class="flex.start-5">5</div>
+                </div>
+            </div>
+            <div class="container__aling-self__flex-end">
+                <h4>Flex-end</h4>
+                <p>El límite transversal final del elemento flexible es unido al borde transversal final de la línea.
+                </p>
+                <div class="aling-self__flex-end">
+                    <div class="flex-end-1">1</div>
+                    <div class="flex-end-2">2</div>
+                    <div class="flex-end-3">3</div>
+                    <div class="flex-end-4">4</div>
+                    <div class="flex-end-5">5</div>
+                </div>
+            </div>
+            <div class="container__aling-self__center">
+                <h4>Center</h4>
+                <p>Los límites del elemento flexible son centrados dentro de la línea en su eje transversal. Si el
+                    tamaño transversal del elemento es superior al del contenedor, se excederá por igual hacia ambas
+                    direcciones.</p>
+                <div class="aling-self__center">
+                    <div class="center-1">1</div>
+                    <div class="center-2">2</div>
+                    <div class="center-3">3</div>
+                    <div class="center-4">4</div>
+                    <div class="center-5">5</div>
+                </div>
+            </div>
+            <div class="container__aling-self__baseline">
+                <h4>Baseline</h4>
+                <p>Todos los elementos flexibles son ajustados de modo que sus bases estén alineadas. El elemento con la
+                    distancia mayor entre su límite transversal inicial y su base es combinado con el borde transversal
+                    de la línea.</p>
+                <div class="aling-self__baseline">
+                    <div class="baseline-1">1</div>
+                    <div class="baseline-2">2</div>
+                    <div class="baseline-3">3</div>
+                    <div class="baseline-4">4</div>
+                    <div class="baseline-5">5</div>
+                </div>
+            </div>
+            <div class="container__aling-self__stretch">
+                <h4>Stretch</h4>
+                <p>Las elementos flexibles son estirados de modo que el tamaño transversal de sus límites sea el mismo
+                    de la línea, manteniendo sus restricciones de anchura y altura.</p>
+                <div class="aling-self__stretch">
+                    <div class="stretch-1">1</div>
+                    <div class="stretch-2">2</div>
+                    <div class="stretch-3">3</div>
+                    <div class="stretch-4">4</div>
+                    <div class="stretch-5">5</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-shrink">
+            <h3>Flex-shrink</h3>
+            <p id="p">Especifica cómo se encogerá el artículo en relación con el resto de los artículos flexibles dentro
+                del
+                mismo contenedor.</p>
+            <div class="container__flex-shrink__1">
+                <h4>Ejemplo #1</h4>
+                <p>En este ejemplo la caja 3 se está encogiendo 6 veces más en comparación a las otras cajas. </p>
+                <div class="flex-shrink__1">
+                    <div class="-1">1</div>
+                    <div class="-2">2</div>
+                    <div class="-3">3</div>
+                    <div class="-4">4</div>
+                    <div class="-5">5</div>
+                    <div class="-1">1</div>
+                    <div class="-2">2</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-grow">
+            <h3>Flex-grow</h3>
+            <p id="p">Especifica cuánto crecerá un elemento flexible en relación con el resto de los elementos flexibles.</p>
+            <div class="container__flex-grow">
+                <h4>Ejemplo #1</h4>
+                <p>En este ejemplo la caja 3 está creciendo 8 veces más en relación a las otras cajas. </p>
+                <div class="flex-grow__1">
+                    <div class="-1">1</div>
+                    <div class="-2">2</div>
+                    <div class="-3">3</div>
+                    <div class="-4">4</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex-basis">
+            <h3>Flex-basis</h3>
+            <p id="p">Especifica el width de los items</p>
+            <div class="container__flex-basis">
+                <h4>Ejemplo #1</h4>
+                <p>En este ejemplo la caja 3 tiene un flex-basis de 200px. </p>
+                <div class="flex-basis__1">
+                    <div class="-1">1</div>
+                    <div class="-2">2</div>
+                    <div class="-3">3</div>
+                    <div class="-4">4</div>
+                    <div class="-5">5</div>
+                </div>
+            </div>
+        </div>
+        <div class="flex">
+            <h3>Flex</h3>
+            <p id="p">Es una propiedad abreviada para los flex-grow, flex-shrinky flex-basispropiedades.</p>
+            <div class="container__flex">
+                <h4>Ejemplo #1</h4>
+                <div class="flex__1">
+                    <div class="-1">1</div>
+                    <div class="-2">2</div>
+                </div>
+            </div>
+        </div>
+        <div class="order">
+            <h3>order</h3>
+            <p id="p">Especifica el orden de los items</p>
+            <div class="container__order">
+                <h4>Ejemplo #1</h4>
+                <div class="order__1">
+                    <div class="-1">1</div>
+                    <div class="-2">2</div>
+                    <div class="-3">3</div>
+                    <div class="-4">4</div>
+                    <div class="-5">5</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
